@@ -1,13 +1,10 @@
 import logging
 
 from bs4 import BeautifulSoup
-from time import sleep
 
 
-from _db import database
 from helper import helper
 from settings import CONFIG
-from psyplay import PsyPlay
 from torotheme import Torotheme
 
 logging.basicConfig(format="%(asctime)s %(levelname)s:%(message)s", level=logging.INFO)
