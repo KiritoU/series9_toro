@@ -86,5 +86,7 @@ database = Database()
 if __name__ == "__main__":
     ID = 85
     condition = f'ID = "{ID}"'
-    be_comic = database.select_all_from(table=f"{CONFIG.TABLE_PREFIX}posts")
-    print(be_comic)
+    posts = database.select_all_from(
+        table=f"{CONFIG.TABLE_PREFIX}posts", condition=condition
+    )
+    print(posts)
