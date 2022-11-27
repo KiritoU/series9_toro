@@ -60,7 +60,7 @@ def main():
     post_types = [
         "series",
         "attachment",
-        "revision",
+        # "revision",
         "movies",
         # "episodes",
         # "post",
