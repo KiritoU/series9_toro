@@ -13,7 +13,7 @@ def delete_with(post_ids):
         logging.info("Deleting post: {0}".format(post_id))
 
         query = f"""SELECT tr.term_taxonomy_id, tt.taxonomy, t.name, t.term_id
-FROM wp_term_relationships tr, wp_posts p, wp_term_taxonomy tt, wp_terms t
+FROM {CONFIG.TABLE_PREFIX}term_relationships tr, {CONFIG.TABLE_PREFIX}posts p, {CONFIG.TABLE_PREFIX}term_taxonomy tt, {CONFIG.TABLE_PREFIX}terms t
 WHERE p.ID={post_id} AND p.ID=tr.object_id AND tr.term_taxonomy_id=tt.term_taxonomy_id AND t.term_id=tt.term_id;
 """
 
